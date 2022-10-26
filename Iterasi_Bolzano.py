@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def f(x):
     return (x**3+3*x**2+5*x-5)
  
-iterasi_maks = 50 
+max = 50 
 ketelitian = 10E-6  
 x1 = float(input("Masukkan x1: "))       
 x2 = float(input("Masukkan x2: "))      
@@ -16,18 +16,18 @@ if f(x1) * f(x2) > 0:
     exit()
  
 
-print('----------------------------------------------------------------------------')
+print('............................................................................')
 print('iterasi \t x1\t\t x2\t\t xt\t\t f(xt)        ')
-print('----------------------------------------------------------------------------')
+print('............................................................................')
 
-for i in range(iterasi_maks):
+for i in range(max):
     xt = (x1 + x2)/2
 
     # Output hasil sesuai iterasi
     print(str(i + 1)+'\t\t% 10.8f\t% 10.8f\t% 10.8f\t% 10.8f\t' %(x1, x2, xt, f(xt)))
  
     if np.abs(f(xt)) < ketelitian:
-        print('----------------------------------------------------------------------------')
+        print('............................................................................')
         print('Nilai akar: '+ str(xt))
         exit()
 
@@ -37,8 +37,8 @@ for i in range(iterasi_maks):
     else: 
         x1 = xt
  
-print('----------------------------------------------------------------------------')
-if i == iterasi_maks - 1:
+print('............................................................................')
+if i == max - 1:
     print('\n\nIterasi maksimum!!!')
     print('Nilai akar: '+ str(xt))
 
