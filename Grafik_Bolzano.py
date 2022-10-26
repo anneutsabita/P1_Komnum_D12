@@ -19,7 +19,7 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 
 
-plt.plot(x, y, 'g')
+plt.plot(x, y, 'b')
 plt.title("bolzano method")
 # show the plot
 plt.show()
